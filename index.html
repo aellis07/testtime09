@@ -9,15 +9,30 @@
   </head>
   <body>
     <header>
-      <h1>Let's test your coding knowledge</h1>
+      <div>
+        <nav><a href="highscore.html">View Highscores</a></nav>
+        <!-- <div id="ime">Time</div> -->
+      </div>
     </header>
     <main>
-      <div class="container">
-        <div id="quiz-section"></div>
-      </div>
-      <ul></ul>
-      <h2></h2>
+      <section class="gamecontainer">
+        <h1>Let's test your coding knowledge!</h1>
+        <section id="quiz-section" class="hide">
+          <div id="question">Question</div>
+          <div id="userchoices" class="buttons">
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+          </div>
+          <section class="gamenavigation">
+            <button id="startbutton" class="start-btn btn">Start</button>
+            <button id="nextbutton" class="next-btn hide">Next</button>
+          </section>
+        </section>
+      </section>
     </main>
+    <script src="script.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
