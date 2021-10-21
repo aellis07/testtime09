@@ -5,34 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styless.css" />
   </head>
   <body>
+    <!-- Display Bar at the top of the screen -->
     <header>
-      <div>
-        <nav><a href="highscore.html">View Highscores</a></nav>
-        <!-- <div id="ime">Time</div> -->
+      <div >
+        <a href="highscore.html">View Highscores</a>
+        <a id="time">Time</a>
       </div>
     </header>
+    <!-- Main section where the quiz takes place -->
     <main>
       <section class="gamecontainer">
-        <h1>Let's test your coding knowledge!</h1>
-        <section id="quiz-section" class="hide">
+        <!-- Main container header -->
+        <h1>Let's test your coding knowledge!</h1>      
+        <div class="hide" id="quizsection">
+          <!-- Where the question will be asked -->
           <div id="question">Question</div>
-          <div id="userchoices" class="buttons">
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
+          <div id="user-choices" class="buttons">
+            <!-- Buttons that users will press to answer questions-->
+            <button class="bttn"></button>
+            <button class="bttn"></button>
+            <button class="bttn"></button>
+            <button class="bttn"></button>
           </div>
-          <section class="gamenavigation">
-            <button id="startbutton" class="start-btn btn">Start</button>
-            <button id="nextbutton" class="next-btn hide">Next</button>
-          </section>
-        </section>
-      </section>
+
+        </div>
+        <!-- Navigation area -->
+        <div class="gamenavigation">
+          <!-- Start and Next buttons -->
+          <button id="startbutton" class="startbutton bttn">Start</button>
+          <button id="next" class="nextbutton hide">Next</button>
+        </div>
+      </div>
     </main>
-    <script src="script.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
