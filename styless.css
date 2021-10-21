@@ -60,3 +60,14 @@ h1 {
   align-items: center;
   padding-left: 110px;
 }
+
+.bttn {
+  background-color: rgb(58, 61, 61);
+  color: rgba(245, 245, 245, 0.856);
+  border: solid 1px rgb(41, 34, 46);
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  width: 50%;
+  align-items: center;
+}
