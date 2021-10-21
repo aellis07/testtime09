@@ -135,35 +135,6 @@ function resetState() {
   }
 }
 
-function setStatusClass(element, correct) {
-  clearStatusClass(element);
-  if (correct) {
-    element.classList.add("correct");
-  } else {
-    element.classList.add("incorrect");
-  }
-}
-
-function clearStatusClass(element) {
-  element.classList.remove("correct");
-  element.classList.remove("incorrect");
-}
-function endGame() {
-  nextButton.disabled = true;
-
-  var userInitials = prompt("Save your initials here: ");
-  localStorage.setItem("userInitials", JSON.stringify(userInitials));
-}
-
-function getHighScore() {
-  var highScore = JSON.parse(localStorage.getItem("userInitials"));
-  if (lastGrade !== null) {
-    document.getElementById("time").innerHTML = highScore.userInitials;
-    console.log(highScore);
-    return;
-  }
-}
-
 // USER INTERACTIONS
 
 startButton.addEventListener("click", startGame);
