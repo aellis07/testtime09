@@ -153,6 +153,7 @@ function endGame() {
 
   var userInitials = prompt("Save your initials here: ");
   localStorage.setItem("userInitials", JSON.stringify(userInitials));
+  // check to see if user initials are being saved
   console.log(userInitials);
 }
 
@@ -167,12 +168,12 @@ function getHighScore() {
 
 // USER INTERACTIONS
 
-startButton.addEventListener("click", startGame);
-nextButton.addEventListener("click", () => {
-  currentQuestionIndex++;
-  if (currentQuestionIndex === questions.length) {
-    endGame();
-  } else {
-    nextQuestion();
-  }
-});
+// // startButton.addEventListener("click", startGame);
+// // nextButton.addEventListener("click", () => {
+//   currentQuestionIndex++;
+//   if (currentQuestionIndex === questions.length) {
+//     endGame();
+//   } else {
+//     nextQuestion();
+//   }
+// });
