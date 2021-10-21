@@ -71,3 +71,7 @@ h1 {
   width: 50%;
   align-items: center;
 }
+
+.bttn:hover {
+  background-color: dimgray;
+}
