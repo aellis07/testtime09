@@ -5,6 +5,7 @@ var nextButton = document.getElementById("nextbutton");
 // GLOBAL VARIABLES
 var timeEl = document.getElementById("time");
 var questionSection = document.getElementById("quizsection");
+var randomizeQuestion, currentQuestionIndex;
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("user-choices");
 
@@ -60,6 +61,15 @@ var questions = [
 ];
 
 // FUNCTIONS
+function startGame() {
+  startButton.classList.add("hide");
+  nextButton.classList.remove("hide");
+  randomizeQuestion = questions.sort(() => (Math.random = 0.5));
+  currentQuestionIndex = 0;
+  questionsection.classList.remove("hide");
+  setNextQuestion();
+  countDown();
+}
 // Start game
 // Start timer
 // Show question
@@ -68,3 +78,12 @@ var questions = [
 // End of game
 
 // USER INTERACTIONS
+startButton.addEventListener("click", startGame);
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+  if (currentQuestionIndex === questions.length) {
+    endGame();
+  } else {
+    nextQuestion();
+  }
+});
