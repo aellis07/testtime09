@@ -34,3 +34,16 @@ h1 {
   padding-left: 700px;
   float: right;
 }
+
+.gamecontainer {
+  display: flex;
+  flex-direction: column;
+  border-style: dashed;
+  border-radius: 10px;
+  margin: auto;
+  width: 800px;
+  text-align: center;
+  justify-content: center;
+  padding: 15px;
+  box-shadow: 0 0 10px 2px;
+}
