@@ -100,3 +100,18 @@ h1 {
 .button:hover {
   background-color: dimgray;
 }
+
+.submitbutton:hover {
+  background-color: dimgray;
+  color: whitesmoke;
+}
+
+.gamenavigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
