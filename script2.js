@@ -135,6 +135,20 @@ function resetState() {
   }
 }
 
+function setStatusClass(element, correct) {
+  clearStatusClass(element);
+  if (correct) {
+    element.classList.add("correct");
+  } else {
+    element.classList.add("incorrect");
+  }
+}
+
+function clearStatusClass(element) {
+  element.classList.remove("correct");
+  element.classList.remove("incorrect");
+}
+
 // USER INTERACTIONS
 
 startButton.addEventListener("click", startGame);
