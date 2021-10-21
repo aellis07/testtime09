@@ -89,3 +89,14 @@ h1 {
   outline: none;
   width: 25%;
 }
+
+.buttons .correct {
+  background-color: darkgreen;
+}
+
+.buttons .incorrect {
+  background-color: crimson;
+}
+.button:hover {
+  background-color: dimgray;
+}
