@@ -1,16 +1,15 @@
 function gethighScore() {
-  var newuserScore = JSON.parse(localStorage.getItem("userScore"));
-  if (newuserScore !== null) {
+  var newuserInitial = JSON.parse(localStorage.getItem("userScore"));
+  var newuserScore = JSON.parse(localStorage.getItem("secondsLeft"));
+  if (newuserInitial !== null) {
     document.getElementById("userInitials").innerHTML =
       "User initials: " + newuserScore;
+  }
+  if (newuserScore !== null) {
+    document.getElementById("displayScore").innerHTML =
+      "User score: " + newuserScore;
   } else {
     return;
-    // {
-    //   document.getElementById("userInitials").innerHTML =
-    //     "User: " + localStorage.getItem(newuserScore);
-    //   console.log(newuserScore);
-
-    //   return;
   }
 }
 

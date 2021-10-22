@@ -69,19 +69,13 @@ function countDown() {
     if (secondsLeft >= 0) {
       timeEl.textContent = secondsLeft + " seconds left";
       secondsLeft--;
-    } else if (secondsLeft >= 0) {
-      timeEl.textContent = "Time's up. Quiz over";
-      clearInterval(timeInterval);
-      nextButton.classList.add("hide");
-
-      endGame();
+      localStorage.setItem("secondsLeft", JSON.stringify(secondsLeft));
+      console.log(secondsLeft);
     } else {
       timeEl.textContent = "Time's up. Quiz over";
       clearInterval(timeInterval);
       nextButton.classList.add("hide");
-
       endGame();
-      //   console.log(initials);
     }
   }, 1000);
 }
@@ -160,8 +154,10 @@ function endGame() {
   //   initials: "AE",
   //   score: 25,
   // };
+
   localStorage.setItem("userScore", JSON.stringify(userScore));
   console.log(userScore);
+  return;
 }
 
 // function getHighScore() {
