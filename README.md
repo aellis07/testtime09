@@ -2,7 +2,7 @@
 
 For this assignment I made a interactive quiz with a built-in timer.
 
-The technologies used in this homework were as follows:
+The technologies used in this assignment were as follows:
 HTML
 CSS
 Javascript
@@ -22,9 +22,11 @@ THEN I can save my initials and my score.
 The main challenges I faced with this assignment were:
 
 1. Stopping the timer when the user reached the end of the quiz.
-2. Usig quiz time as form of keeping score.
+2. Using quiz time as form of keeping score.
 3. Getting the local storage to display on the webpage.
 
 I was able to get the user initials and user score on the score board, but since the users score is dependent on the timer which doesnt stop at the end of the quiz the scores recorded end up being inaccurate.
+
+This assignment helped me gain a better understanding of important javascript concepts such as setting attributes, time-intervals, keyboard events as well as local storage
 
 ![Screenshot](./assets/images/qz.png)
