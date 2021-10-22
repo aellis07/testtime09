@@ -95,6 +95,9 @@ function nextQuestion(event) {
   showQuestion(randomizeQuestions[currentQuestionIndex]);
   if (randomizeQuestions.length === currentQuestionIndex) {
   }
+  if (currentQuestionIndex === [4]) {
+    endGame();
+  }
   console.log(questions);
   return;
 }
@@ -159,19 +162,6 @@ function endGame() {
   console.log(userScore);
   return;
 }
-
-// function getHighScore() {
-//   var newuserScore = JSON.parse(localStorage.getItem("userScore"));
-//   {
-//     document.getElementById("userInitials").innerHTML =
-//       "User: " + localStorage.newuserScore;
-//     console.log(newuserScore);
-
-//     return;
-//   }
-// }
-
-// getHighScore();
 
 // USER INTERACTIONS
 
