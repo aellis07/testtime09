@@ -70,7 +70,7 @@ function countDown() {
       timeEl.textContent = secondsLeft + " seconds left";
       secondsLeft--;
       localStorage.setItem("secondsLeft", JSON.stringify(secondsLeft));
-      console.log(secondsLeft);
+      // console.log(secondsLeft);
     } else {
       timeEl.textContent = "Time's up. Quiz over";
       clearInterval(timeInterval);

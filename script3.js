@@ -3,7 +3,7 @@ function gethighScore() {
   var newuserScore = JSON.parse(localStorage.getItem("secondsLeft"));
   if (newuserInitial !== null) {
     document.getElementById("userInitials").innerHTML =
-      "User initials: " + newuserScore;
+      "User initials: " + newuserInitial;
   }
   if (newuserScore !== null) {
     document.getElementById("displayScore").innerHTML =
