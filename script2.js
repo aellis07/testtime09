@@ -8,7 +8,7 @@ var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("user-choices");
 var nextButton = document.getElementById("nextbutton");
 
-var questions = [
+const questions = [
   {
     question: "Commonly used data types DO NOT include:",
     answers: [
@@ -63,20 +63,24 @@ var questions = [
 
 // Timer
 function countDown() {
-  var secondsLeft = 5;
+  var secondsLeft = 60;
 
   var timeInterval = setInterval(function () {
     if (secondsLeft >= 0) {
       timeEl.textContent = secondsLeft + " seconds left";
       secondsLeft--;
+    } else if (secondsLeft >= 0) {
+      timeEl.textContent = "Time's up. Quiz over";
+      clearInterval(timeInterval);
+      nextButton.classList.add("hide");
+
+      endGame();
     } else {
       timeEl.textContent = "Time's up. Quiz over";
       clearInterval(timeInterval);
       nextButton.classList.add("hide");
 
-      var initials = prompt("Save your initials here: ");
-
-      localStorage.setItem("initials", JSON.stringify(initials));
+      endGame();
       //   console.log(initials);
     }
   }, 1000);
@@ -151,19 +155,27 @@ function clearStatusClass(element) {
 function endGame() {
   nextbutton.disabled = true;
 
-  var userInitials = prompt("Save your initials here: ");
-  localStorage.setItem("userInitials", JSON.stringify(userInitials));
-  console.log(userInitials);
+  var userScore = prompt("Save your initials here: ");
+  // var userScore = {
+  //   initials: "AE",
+  //   score: 25,
+  // };
+  localStorage.setItem("userScore", JSON.stringify(userScore));
+  console.log(userScore);
 }
 
-function getHighScore() {
-  var highScore = JSON.parse(localStorage.getItem("userInitials"));
-  if (lastGrade !== null) {
-    document.getElementById("userInitials").innerHTML = highScore.userInitials;
-    // console.log(highScore);
-    return;
-  }
-}
+// function getHighScore() {
+//   var newuserScore = JSON.parse(localStorage.getItem("userScore"));
+//   {
+//     document.getElementById("userInitials").innerHTML =
+//       "User: " + localStorage.newuserScore;
+//     console.log(newuserScore);
+
+//     return;
+//   }
+// }
+
+// getHighScore();
 
 // USER INTERACTIONS
 
